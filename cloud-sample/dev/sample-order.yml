@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: sample-order
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:h2:mem:cloud-sample
@@ -21,7 +19,6 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
     schema: classpath:schema.sql
-    data: classpath:data.sql
 server:
   port: 7500
 eureka:
