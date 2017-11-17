@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: sample-order
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:h2:mem:cloud-sample
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 123456
+    filters: stat,wall
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+server:
+  port: 7500
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+      # 访问实例是，需要 主机IP+端口，如下配置主机为对应的ip
+      hostname: ${spring.cloud.client.ipAddress}
+      #  Instance ID 默认值是:${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+      instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+      prefer-ip-address: true
