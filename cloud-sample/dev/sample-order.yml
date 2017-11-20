@@ -21,6 +21,8 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
     schema: classpath:schema.sql
+  jpa:
+    show-sql: true
 server:
   port: 7500
 eureka:
