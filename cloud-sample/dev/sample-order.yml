@@ -33,3 +33,12 @@ eureka:
       #  Instance ID 默认值是:${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
       instance-id: ${spring.cloud.client.ipAddress}:${server.port}
       prefer-ip-address: true
+api:
+  title: ${spring.application.name} RESTFUL 接口文档
+  descn: ${spring.application.name}是spring cloud sample项目中的订单微服务
+  author:
+    name: Kevin无道
+    url: https://github.com/kevin-gm/learning_demo/tree/master/cloud-sample/sample-order
+    email: aa@qq.com
+  version: 1.0
+  service-url: http://localhost:${server.port}/swagger-ui.html
