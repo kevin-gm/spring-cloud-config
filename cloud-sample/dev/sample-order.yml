@@ -3,10 +3,10 @@ spring:
     name: sample-order
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:h2:mem:cloud-sample
-    driver-class-name: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/cloud-sample?useUnicode=true&characterEncoding=utf8&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: kevin
     filters: stat,wall
     maxActive: 20
     initialSize: 1
