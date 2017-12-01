@@ -23,8 +23,6 @@ spring:
     schema: classpath:schema.sql
   jpa:
     show-sql: true
-server:
-  port: 7500
 eureka:
   client:
     service-url:
