@@ -46,4 +46,4 @@ api:
   service-url: http://localhost:${server.port}/swagger-ui.html
 test:
   bus:
-    value: kevin-gm-gg-ll-kk
+    value: kevin-gm-gg-ll-kk-aa
