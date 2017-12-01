@@ -44,3 +44,6 @@ api:
     email: aa@qq.com
   version: 1.0
   service-url: http://localhost:${server.port}/swagger-ui.html
+test:
+  bus:
+    value: kevin
